@@ -91,38 +91,38 @@ systemctl restart docker.service
 
 version: '3'
 services:
-  devops:
-    image: rahamshaik/devopsreponit:latest
-    ports:
-      - "80:80"
-    volumes:
-      - "devopsvol"
-    deploy:
-      replicas: 3
-
-  aws:
-    image: rahamshaik/awsreponit:latest
+  movies:
+    image: laxmisrikar99/movies:latest
     ports:
       - "81:80"
     volumes:
-      - "awsvol"
+      - "moviesvol"
     deploy:
       replicas: 3
 
-  datascience:
-    image: rahamshaik/datasciencereponit:latest
+  train:
+    image: laxmisrikar99/tarin:latest
     ports:
       - "82:80"
     volumes:
-      - "datasciencevol"
+      - "trainvol"
     deploy:
       replicas: 3
 
-  azure:
-    image: rahamshaik/azurereponit:latest
+  dth:
+    image: laxmisrikar99/dth:latest
     ports:
       - "83:80"
     volumes:
-      - "azurevol"
+      - "dthvol"
+    deploy:
+      replicas: 3
+
+  recharge:
+    image: laxmisrikar99/recharge:latest
+    ports:
+      - "84:80"
+    volumes:
+      - "rechargevol"
     deploy:
       replicas: 3
